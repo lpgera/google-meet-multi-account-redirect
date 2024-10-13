@@ -1,16 +1,16 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Google Meet Multi Account Redirect",
   "description": "Auto redirect to company GSuite account",
   "author": "lpgera",
   "version": "1.0",
   "permissions": [
-    "webRequest",
-    "webRequestBlocking",
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
     "https://meet.google.com/"
   ],
   "background": {
-    "scripts": ["backgroundScript.js"],
-    "persistent": true
+    "service_worker": "service-worker.js"
   }
 }
